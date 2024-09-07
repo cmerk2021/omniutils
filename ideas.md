@@ -53,4 +53,3 @@
 * **Performance Optimization:**
   * Functions for profiling and optimizing code.
 
-This is just a starting point. You can add more functions based on your needs and the specific use cases you anticipate for your package.
