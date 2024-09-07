@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "omniutils",
+  "name": "@connormerk/omniutils",
   "version": "1.0.0",
   "description": "A comprehensive utility library",
   "main": "index.js",
