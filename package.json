@@ -1,0 +1,25 @@
+{
+  "name": "omniutils",
+  "version": "1.0.0",
+  "description": "A comprehensive utility library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmerk2021/omniutils.git"
+  },
+  "keywords": [
+    "utils",
+    "utilities",
+    "helpers",
+    "toolkit"
+  ],
+  "author": "Connor Merk <contact@connormerk.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/cmerk2021/omniutils/issues"
+  },
+  "homepage": "https://github.com/cmerk2021/omniutils#readme"
+}
