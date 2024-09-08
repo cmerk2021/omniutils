@@ -142,7 +142,7 @@ function subtractDays(date, days) {
   return newDate;
 }
 
-module.exports = {
+export {
     formatDate,
     parseDate,
     getTimezoneOffset,

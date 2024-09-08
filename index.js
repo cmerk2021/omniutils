@@ -1,78 +1,13 @@
-import {
-    capitalize,
-    decapitalize,
-    reverse,
-    truncate,
-    slugify,
-    camelCase,
-    kebabCase,
-    snakeCase,
-    isPalindrome 
-} from './modules/string.js'
+import * as stringUtils from './modules/string.js';
+import * as arrayUtils from './modules/array.js';
+import * as objectUtils from './modules/object.js';
+import * as dateUtils from './modules/date.js';
+import HttpClient from './modules/http.js';
 
-import {
-    flatten,
-    groupBy,
-    shuffle,
-    intersection,
-    difference,
-    union,
-    unique
-} from './modules/array.js'
-
-import {
-    clone,
-    merge,
-    pick,
-    omit,
-    isEmpty
-} from './modules/object.js'
-
-import {
-    formatDate,
-    parseDate,
-    getTimezoneOffset,
-    addDays,
-    subtractDays
-} from './modules/date.js'
-
-import HttpClient from './modules/http.js'
-
-module.exports = {
-    stringUtils: {
-        capitalize,
-        decapitalize,
-        reverse,
-        truncate,
-        slugify,
-        camelCase,
-        kebabCase,
-        snakeCase,
-        isPalindrome
-    },
-    arrayUtils: {
-        flatten,
-        groupBy,
-        shuffle,
-        intersection,
-        difference,
-        union,
-        unique
-    },
-    objectUtils:  {
-        clone,
-        merge,
-        pick,
-        omit,
-        isEmpty
-    },
-    dateUtils: {
-        formatDate,
-        parseDate,
-        getTimezoneOffset,
-        addDays,
-        subtractDays
-    },
-    HttpClient,
-    
+export {
+    stringUtils,
+    arrayUtils,
+    objectUtils,
+    dateUtils,
+    HttpClient
 };
