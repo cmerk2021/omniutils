@@ -64,32 +64,4 @@ Object.defineProperty(RunService, "environment", {
 });
 
 
-const Heartbeat = {
-  heartbeatCallback: null, // Property to hold the callback function
-  isRunning: false, // Flag to control the heartbeat
-
-  // Method to start the heartbeat
-  startHeartbeat(callback) {
-    this.heartbeatCallback = callback; // Set the callback function
-    this.isRunning = true; // Set the running flag to true
-    this.tick(); // Start the ticking process
-  },
-
-  // Method to stop the heartbeat
-  stopHeartbeat() {
-    this.isRunning = false; // Set the running flag to false
-  },
-
-  // Internal method to handle the heartbeat
-  tick() {
-    if (this.isRunning && this.heartbeatCallback) {
-      this.heartbeatCallback(); // Call the callback function
-      requestAnimationFrame(() => this.tick()); // Schedule the next tick
-    }
-  }
-};
-
-RunService.Heartbeat = Heartbeat
-
-
 export default RunService
