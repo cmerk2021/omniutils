@@ -6,6 +6,7 @@ import HttpClient from './modules/http.js';
 import * as dataValidation from './modules/validation.js';
 import * as colorUtils from './modules/color.js';
 import Timer from './modules/timer.js'
+import * as RunService from './modules/runservice.js'
 
 export {
     stringUtils,
@@ -16,4 +17,5 @@ export {
     dataValidation,
     colorUtils,
     Timer,
+    RunService,
 };
