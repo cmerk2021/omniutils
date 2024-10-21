@@ -5,6 +5,7 @@ import * as dateUtils from './modules/date.js';
 import HttpClient from './modules/http.js';
 import * as dataValidation from './modules/validation.js';
 import * as colorUtils from './modules/color.js';
+import Timer from './modules/timer.js'
 
 export {
     stringUtils,
@@ -14,14 +15,5 @@ export {
     HttpClient,
     dataValidation,
     colorUtils,
+    Timer,
 };
-
-module.exports = {
-    stringUtils,
-    arrayUtils,
-    objectUtils,
-    dateUtils,
-    HttpClient,
-    dataValidation,
-    colorUtils,
-}
