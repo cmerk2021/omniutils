@@ -7,6 +7,7 @@ import * as dataValidation from './modules/validation.js';
 import * as colorUtils from './modules/color.js';
 import Timer from './modules/timer.js'
 import RunService from './modules/runservice.js'
+import * as tempStorage from './modules/tempstorage.js'
 
 export {
     stringUtils,
@@ -18,4 +19,5 @@ export {
     colorUtils,
     Timer,
     RunService,
+    tempStorage,
 };
