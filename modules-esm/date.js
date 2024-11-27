@@ -142,10 +142,44 @@ function subtractDays(date, days) {
   return newDate;
 }
 
+function generateDiscordTimestamp(dateObj, type) {
+  // Convert the date object to a Unix timestamp in milliseconds
+  const timestampMs = dateObj.getTime();
+
+  // Format the timestamp based on the specified type
+  switch (type) {
+    case "t":
+      // Short time format (e.g., 11:20 AM)
+      return `<t:${timestampMs}:t>`;
+    case "T":
+      // Long time format (e.g., November 27, 2024 at 2:30 PM)
+      return `<t:${timestampMs}:T>`;
+    case "d":
+      // Short date format (e.g., 11/27/2024)
+      return `<t:${timestampMs}:d>`;
+    case "D":
+      // Long date format (e.g., November 27, 2024)
+      return `<t:${timestampMs}:D>`;
+    case "f":
+      // Full date and time format
+      return `<t:${timestampMs}:f>`;
+    case "F":
+      // Full date and time format, including relative time
+      return `<t:${timestampMs}:F>`;
+    case "R":
+      // Relative time format (e.g., 2 hours ago)
+      return `<t:${timestampMs}:R>`;
+    default:
+      // Default to short time format if an invalid type is provided
+      return `<t:${timestampMs}:t>`;
+  }
+}
+
 export {
     formatDate,
     parseDate,
     getTimezoneOffset,
     addDays,
-    subtractDays
+    subtractDays,
+    generateDiscordTimestamp
 }
