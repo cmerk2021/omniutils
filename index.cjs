@@ -34,6 +34,15 @@ if (typeof queueMicrotask === 'function') {
     }, 0);
   }
 
-process.on('uncaughtException', (error) => {
-    OmniUtils.internal.error(error)
-});
+  if (typeof process !== 'undefined' && process.versions && process.versions.node) {
+    // Node.js environment
+    process.on('uncaughtException', (error) => {
+      OmniUtils.internal.error(error);
+    });
+  } else if (typeof window !== 'undefined' && typeof window.document !== 'undefined') {
+    // Browser environment
+    window.onerror = function(message, source, lineno, colno, error) {
+      OmniUtils.internal.error(error);
+      return false; // Prevent default browser error handling (optional)
+    };
+  }
