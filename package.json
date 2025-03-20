@@ -6,7 +6,8 @@
   "main": "index.cjs",
   "module": "index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,10 @@
     "url": "https://github.com/cmerk2021/omniutils/issues"
   },
   "homepage": "https://omniutils.js.org",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.36.0"
+  },
   "dependencies": {
     "pino": "^9.6.0",
     "pino-pretty": "^13.0.0"
