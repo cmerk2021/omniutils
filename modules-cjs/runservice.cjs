@@ -1,4 +1,9 @@
-var RunService = {}
+const OmniUtils = require("./omniutils.cjs")
+
+try {
+  OmniUtils.internal.debug("RunService module imported.")
+
+  var RunService = {}
 
 function detectEnvironment() {
   if (typeof window !== 'undefined' && typeof document !== 'undefined') {
@@ -65,3 +70,6 @@ Object.defineProperty(RunService, "environment", {
 
 
 module.exports = RunService
+} catch (error) {
+  OmniUtils.internal.error(error)
+}

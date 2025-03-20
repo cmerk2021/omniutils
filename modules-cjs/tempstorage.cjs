@@ -1,4 +1,9 @@
-let storage = {}
+const OmniUtils = require("./omniutils.cjs")
+
+try {
+    OmniUtils.internal.debug("tempStorage module imported.")
+
+    let storage = {}
 
 function setItem(key, value) {
     storage[key] = value
@@ -16,4 +21,7 @@ module.exports = {
     setItem,
     getItem,
     removeItem
+}
+} catch (error) {
+    OmniUtils.internal.error(error)
 }

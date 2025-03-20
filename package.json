@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@connormerk/omniutils",
-  "version": "2.1.0",
+  "version": "3.0.6-beta",
   "description": "A comprehensive utility library",
   "main": "index.cjs",
   "module": "index.mjs",
@@ -18,12 +18,14 @@
     "helpers",
     "toolkit"
   ],
-  "author": "Connor Merk <contact@connormerk.com>",
+  "author": "Connor Merk <contact@connormerk.dev>",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/cmerk2021/omniutils/issues"
   },
-  "homepage": "https://github.com/cmerk2021/omniutils#readme",
+  "homepage": "https://omniutils.js.org",
   "dependencies": {
+    "pino": "^9.6.0",
+    "pino-pretty": "^13.0.0"
   }
 }

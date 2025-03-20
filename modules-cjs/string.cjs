@@ -1,4 +1,9 @@
-function capitalize(string) {
+const OmniUtils = require("./omniutils.cjs")
+
+try {
+  OmniUtils.internal.debug("stringUtils module imported.")
+
+  function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 function decapitalize(string) {
@@ -87,4 +92,7 @@ module.exports = {
     kebabCase,
     snakeCase,
     isPalindrome
+}
+} catch (error) {
+  OmniUtils.internal.error(error)
 }
